@@ -11,6 +11,9 @@ This was created to decrease the city's garbage.
 ## Demo movie
 
 ## Service flow
+
+![Imgur](https://i.imgur.com/4FUHcw1.png)
+
 1. Recognize garbage from the camera's photos.
 
 2. Send the number of garbage and location information to the server.
