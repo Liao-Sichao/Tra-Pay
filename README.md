@@ -64,7 +64,7 @@ For further usage instructions, here(https://github.com/pedropro/TACO)
 
 * Home Page
 
-        URL : 
+        URL : http://18.183.98.217/mypage.html?
 
 * Face recognition(on Raspberry Pi)
 
