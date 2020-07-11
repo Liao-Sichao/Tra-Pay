@@ -1,5 +1,7 @@
 # Tra-Pay
 
+![trapay](https://imgur.com/a/gCS7s2u)
+
 Tra-Pay stand for Trash and Pay.
 
 This was created to decrease the city's garbage.
@@ -77,7 +79,7 @@ For further usage instructions, here(https://github.com/pedropro/TACO)
 * Saito Masato
 * Nishikawa Takahiro
 
-Kwansei Gakuin Univercity Department of Informatics, School of Science and Technology Miwa Lab.
+Kwansei Gakuin Univercity Department of Informatics, School of Science and Technology Miwa Lab.(https://ist.ksc.kwansei.ac.jp/miwa/miwaLab/)
 
 # License
 Taco(https://github.com/pedropro/TACO)
