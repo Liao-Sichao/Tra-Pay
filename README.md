@@ -65,6 +65,10 @@ For further usage instructions, here(https://github.com/pedropro/TACO)
     
         python detector.py test --dataset=../data --model=taco_10_0 --round 0 --class_map=./taco_config/map_10.csv
 
+![Imgur](https://i.imgur.com/wN7keKo.png)
+
+![Imgur](https://i.imgur.com/xEN21Kc.png)
+
 * Home Page
 
         URL : http://18.183.98.217/mypage.html?
