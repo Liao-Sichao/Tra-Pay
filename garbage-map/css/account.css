@@ -133,3 +133,6 @@ table th{
   width: 155px;
 }
 
+textarea {
+  margin: 0 auto; 
+}

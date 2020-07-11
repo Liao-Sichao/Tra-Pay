@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta charset="UTF-8">
+  		<title>Tra-Pay_Getting_Points</title>
+  		<style>
+    			#contents { display:flex; width:900px;}
+    			#camera, #picture, #result { justify-content:center; margin:5px;}
+		    	#picture { display:none; }
+    			#result { border: 1px solid gray; width:500px; height:500px; padding:10px;}
+    			small { color:gray; }
+  		</style>
+	</head>
+	<body>
+		<div class="form-wrapper">
+
+			<h1 style="text-align:center;">Getting Points</h1>
+			<section id="contents">
+				<video id="camera" width="500" height="500" muted></video>
+				<canvas id="picture" width="500" height="500"></canvas>
+				<div id="result"width="500" height="500">
+    					<small>※The read result is displayed here※</small>
+  				</div>
+			</section>
+
+			<script src="js/jsQR.min.js"></script>
+			<script>
+				const video  = $("#camera");     // === document.querySelector("#camera");
+				const canvas = $("#picture");    // === document.querySelector("#picture");
+				const ctx = canvas.getContext("2d");
+
+				window.onload = () => {
+					const constraints = {
+    						audio: false,
+    							video: {
+      								width: 500,
+      								height: 500,
+      								facingMode: "enviroment" 
+    								}
+  							};
+
+   					navigator.mediaDevices.getUserMedia(constraints)
+  					.then( (stream) => {
+    					video.srcObject = stream;
+    					video.onloadedmetadata = (e) => {
+      					video.play();
+					checkPicture();
+    					};
+  				})
+  				.catch( (err) => {
+    				console.log(err.name + ": " + err.message);
+  				});
+			};
+
+
+		function checkPicture(){
+
+  		ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+		const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		const code = jsQR(imageData.data, canvas.width, canvas.height);
+
+		if( code ){
+    			setQRResult("#result", code.data);  
+    			drawLine(ctx, code.location);       
+			canvas.style.display = 'block';
+			video.style.display = 'none';
+    			video.pause();
+  		}
+  		else{
+    			setTimeout( () => {
+      				checkPicture();
+    				}, 300);
+  			}
+		}
+
+		function drawLine(ctx, pos, options={color:"blue", size:5}){
+			ctx.strokeStyle = options.color;
+			ctx.lineWidth   = options.size;
+  			ctx.beginPath();
+  			ctx.moveTo(pos.topLeftCorner.x, pos.topLeftCorner.y);         // 左上からスタート
+  			ctx.lineTo(pos.topRightCorner.x, pos.topRightCorner.y);       // 右上
+  			ctx.lineTo(pos.bottomRightCorner.x, pos.bottomRightCorner.y); // 右下
+  			ctx.lineTo(pos.bottomLeftCorner.x, pos.bottomLeftCorner.y);   // 左下
+  			ctx.lineTo(pos.topLeftCorner.x, pos.topLeftCorner.y);         // 左上に戻る
+  			ctx.stroke();
+		}
+
+		function setQRResult(id, data){
+  			$(id).innerHTML = escapeHTML(data);
+		}
+
+		 function $(selector){
+  			return( document.querySelector(selector) );
+		}
+
+		function escapeHTML(str){
+  			let result = "";
+  			result = str.replace("&", "&amp;");
+  			result = str.replace("'", "&#x27;");
+  			result = str.replace("`", "&#x60;");
+  			result = str.replace('"', "&quot;");
+  			result = str.replace("<", "&lt;");
+  			result = str.replace(">", "&gt;");
+  			result = str.replace(/\n/, "<br>");
+
+  			return(result);
+		}
+	</script>
+	<p><input type="button" value="Read" id="reload"></p>
+	<script>
+		var reload =document.getElementById('reload');
+		reload.addEventListener('click',function(){
+  			window.location.reload();
+		});
+	</script>
+	</body>
+	</div>
+</html>
