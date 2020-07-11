@@ -1,6 +1,6 @@
 # Tra-Pay
 
-[Imgur](https://i.imgur.com/qgdVDv7.png)
+![Imgur](https://i.imgur.com/qgdVDv7.png)
 
 Tra-Pay stand for Trash and Pay.
 
