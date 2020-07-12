@@ -63,7 +63,7 @@ For further usage instructions, here(https://github.com/pedropro/TACO)
 
     Run taco/detector/detector.py
     
-     `python detector.py test --dataset=../data --model=taco_10_0 --round 0 --class_map=./taco_config/map_10.csv`
+      python detector.py test --dataset=../data --model=taco_10_0 --round 0 --class_map=./taco_config/map_10.csv
 
 test data
 ![Imgur](https://i.imgur.com/EiguLhL.jpg)
@@ -73,15 +73,15 @@ prediction data
 
 * Home Page
 
-     URL : http://18.183.98.217/mypage.html?
+      URL : http://18.183.98.217/mypage.html?
 
 garbage map
 ![Imgur](https://i.imgur.com/inM2dWd.jpg)
 
 * Face recognition(on Raspberry Pi)
 
-     1. Run video.py
-     2. Run kaoninshiki.py
+          1. Run video.py
+          2. Run kaoninshiki.py
 
 ![Imgur](https://i.imgur.com/iPjKjNt.jpg)
 
