@@ -78,7 +78,7 @@ prediction data
 
 * QR Code Reader
 
-      URL :
+      URL : https://ist.ksc.kwansei.ac.jp/miwa/miwaLab/wwlc/garbage-map_demo(html2)/providingpoints.html
 
 trash map
 ![Imgur](https://i.imgur.com/inM2dWd.jpg)
