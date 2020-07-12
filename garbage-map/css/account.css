@@ -97,6 +97,7 @@ form {
   text-transform: uppercase;
   transition: background 0.3s ease-in-out;
   width: 100%;
+  z-index:1;
 }
 
 .button:hover {
@@ -134,5 +135,8 @@ table th{
 }
 
 textarea {
-  margin: 0 auto; 
+  position:absolute;
+  z-index: -1;
+  top:260px;
+  left:200px
 }

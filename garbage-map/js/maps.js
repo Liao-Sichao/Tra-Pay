@@ -17,7 +17,14 @@ function displayData(){
     	center: latlng,
     	mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
-	   
+	
+
+	var a=arrayString[0]*3;
+	var b=arrayString[3]*3;
+	var c=arrayString[6]*3;
+	var d=arrayString[9]*3;
+	var e=arryaString[12]*3;
+   
   	var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
 
   	var m_latlng1 = new google.maps.LatLng(arrayString[1],arrayString[2]);
@@ -28,7 +35,7 @@ function displayData(){
 			fillColor: "#FF0000",                //塗り潰し色
 			fillOpacity: 0.8,                    //塗り潰し透過率
 			path: google.maps.SymbolPath.CIRCLE, //円を指定
-			scale: 16*arrayString[0],            //円のサイズ
+			scale: a,            //円のサイズ
 			strokeColor: "#FF0000",              //枠の色
 			strokeWeight: 1.0                    //枠の透過率
 		}
@@ -43,7 +50,7 @@ function displayData(){
 			fillColor: "#FF0000",                //塗り潰し色
 			fillOpacity: 0.8,                    //塗り潰し透過率
 			path: google.maps.SymbolPath.CIRCLE, //円を指定
-			scale: 16*arrayString[3],             //円のサイズ
+			scale: b,             //円のサイズ
 			strokeColor: "#FF0000",              //枠の色
 			strokeWeight: 1.0                    //枠の透過率
 		}
@@ -57,7 +64,7 @@ function displayData(){
 			fillColor: "#FF0000",                //塗り潰し色
 			fillOpacity: 0.8,                    //塗り潰し透過率
 			path: google.maps.SymbolPath.CIRCLE, //円を指定
-			scale: 16*arrayString[6],            //円のサイズ
+			scale: c,            //円のサイズ
 			strokeColor: "#FF0000",              //枠の色
 			strokeWeight: 1.0                    //枠の透過率
 		}
@@ -71,7 +78,7 @@ function displayData(){
 			fillColor: "#FF0000",                //塗り潰し色
 			fillOpacity: 0.8,                    //塗り潰し透過率
 			path: google.maps.SymbolPath.CIRCLE, //円を指定
-			scale: 16*arrayString[9],            //円のサイズ
+			scale: d,            //円のサイズ
 			strokeColor: "#FF0000",              //枠の色
 			strokeWeight: 1.0                    //枠の透過率
 		}
@@ -85,7 +92,7 @@ function displayData(){
 			fillColor: "#FF0000",                //塗り潰し色
 			fillOpacity: 0.8,                    //塗り潰し透過率
 			path: google.maps.SymbolPath.CIRCLE, //円を指定
-			scale: 16*arrayString[12],           //円のサイズ
+			scale: e,           //円のサイズ
 			strokeColor: "#FF0000",              //枠の色
 			strokeWeight: 1.0                    //枠の透過率
 		}
