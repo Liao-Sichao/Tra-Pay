@@ -15,7 +15,7 @@ This was created to decrease the city's trash.
 
 1. Recognize trash from the camera's photos.
 
-2. Send the number of trash and location information to the server.
+2. Send the amount of trash and location information to the server.
 3. The server reflects the received information on the map of the HP. The color of the markings on the map depends on the number of trash.
 4. The user looks at the map of HP and goes to pick up the trash.
 5. The user throws the trash into a specific trash box.
